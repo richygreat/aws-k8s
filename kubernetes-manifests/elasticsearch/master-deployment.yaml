@@ -7,7 +7,7 @@ metadata:
     app: elasticsearch
     role: master
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -48,7 +48,7 @@ spec:
         - name: "CLUSTER_NAME"
           value: "myesdb"
         - name: "NUMBER_OF_MASTERS"
-          value: "2"
+          value: "1"
         - name: NODE_MASTER
           value: "true"
         - name: NODE_INGEST
@@ -61,9 +61,9 @@ spec:
           value: "-Xms512m -Xmx512m"
         resources:
           limits:
-            memory: 1024Mi
+            memory: 512Mi
           requests:
-            memory: 1024Mi
+            memory: 512Mi
         ports:
         - containerPort: 9300
           name: transport
