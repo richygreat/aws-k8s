@@ -37,6 +37,8 @@ spec:
         image: quay.io/pires/docker-elasticsearch-kubernetes:5.5.0
         imagePullPolicy: Always
         env:
+        - name: "NETWORK_HOST"
+          value: "_eth0_"
         - name: NAMESPACE
           valueFrom:
             fieldRef:
