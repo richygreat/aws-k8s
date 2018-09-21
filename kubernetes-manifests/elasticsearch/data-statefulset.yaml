@@ -54,12 +54,12 @@ spec:
         - name: HTTP_ENABLE
           value: "false"
         - name: "ES_JAVA_OPTS"
-          value: "-Xms8g -Xmx8g"
+          value: "-Xms512m -Xmx512m"
         resources:
           limits:
-            memory: 10Gi
+            memory: 1Gi
           requests:
-            memory: 10Gi
+            memory: 1Gi
         ports:
         - containerPort: 9300
           name: transport
