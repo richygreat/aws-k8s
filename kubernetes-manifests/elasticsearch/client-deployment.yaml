@@ -59,9 +59,9 @@ spec:
           value: "-Xms512m -Xmx512m"
         resources:
           limits:
-            memory: 512Mi
+            memory: 1024Mi
           requests:
-            memory: 512Mi
+            memory: 1024Mi
         ports:
         - containerPort: 9200
           name: http
