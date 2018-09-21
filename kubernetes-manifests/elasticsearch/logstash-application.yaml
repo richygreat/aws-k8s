@@ -56,10 +56,10 @@ spec:
         - /usr/share/logstash/pipeline/logstash.conf
         resources:
           limits:
-            memory: 2Gi
+            memory: 512Mi
             cpu: "200m"
           requests:
-            memory: 2Gi
+            memory: 512Mi
             cpu: "200m"
       volumes:
       - name: pipeline
@@ -83,7 +83,7 @@ metadata:
   labels:
     app: logstash-application
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: logstash-application
   ports:
